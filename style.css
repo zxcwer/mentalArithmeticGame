@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Rancho&display=swap");
+
+* {
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  font-family: "Rancho", cursive;
+}
+body {
+  position: absolute;
+  background-color: rgba(255, 255, 0, 0.3);
+  height: 100vh;
+  width: 100%;
+}
+#clock {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+p {
+  position: relative;
+  font-size: 100px;
+}
+span {
+  position: relative;
+  width: 100%;
+  font-size: 100px;
+  margin-left: 20px;
+}
+.all-box {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+}
+#box {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.item {
+  margin: 20px;
+  text-decoration: none;
+  color: #14396a !important;
+  font-size: 50px;
+  text-shadow: 1px 1px 0px #7cacde;
+  box-shadow: 1px 1px 1px #bee2f9;
+  padding: 90px;
+  border-radius: 10px;
+  border: 2px solid #3866a3;
+  background: #63b8ee;
+  background: linear-gradient(to top, #63b8ee, #468ccf);
+}
+.btn-box {
+  top: 70%;
+  position: absolute;
+  display: flex;
+  z-index: 10;
+}
+.btn {
+  text-align: center;
+  margin-left: 20px;
+  text-decoration: none;
+  color: #14396a !important;
+  font-size: 50px;
+  text-shadow: 1px 1px 0px #7cacde;
+  box-shadow: 1px 1px 1px #bee2f9;
+  padding: 50px 255px;
+  border-radius: 10px;
+  border: 2px solid #3866a3;
+  background: #63b8ee;
+  background: linear-gradient(to top, #63b8ee, #468ccf);
+}
+h1 {
+  font-size: 5em;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.level-section {
+  top: 70%;
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  z-index: 10;
+}
+
+.level {
+  text-align: center;
+  margin-left: 20px;
+  text-decoration: none;
+  color: #14396a !important;
+  font-size: 50px;
+  text-shadow: 1px 1px 0px #7cacde;
+  box-shadow: 1px 1px 1px #bee2f9;
+  padding: 50px 170px;
+  border-radius: 10px;
+  border: 2px solid #3866a3;
+  background: #63b8ee;
+  background: linear-gradient(to top, #63b8ee, #468ccf);
+}
