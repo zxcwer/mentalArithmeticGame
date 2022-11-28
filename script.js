@@ -36,32 +36,8 @@ function countdown() {
   }, 1000);
 }
 
-// function sleep(waitSec) {
-//   let spanedsec = 0;
-//   let id = setInterval(function () {
-//     spanedsec++;
-//     if (spanedsec >= waitSec) {
-//       clearInterval(id);
-//     }
-//   });
-// }
-
-// async function downloadtimer(timerleft) {
-//   timerleft--;
-//   document.getElementById("seconds").textContent = timerleft;
-
-//   setInterval(function () {
-//     timerleft--;
-//     document.getElementById("seconds").textContent = timerleft;
-//     if (timerleft == 0) {
-//       clearInterval(downloadtimer);
-//       console.log("left");
-//       return new Promise((resolve) => {
-//         resolve(0);
-//       });
-//     }
-//   }, 1000);
-// }
-
-// setInterval(countdown(),5000);
+function button() {
+  questionNumber++;
+  update(questionNumber);
+}
 countdown();
