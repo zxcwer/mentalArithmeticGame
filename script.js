@@ -8,12 +8,12 @@ function update(i) {
       let no2 = data[i].text[2];
       let no3 = data[i].text[3];
       document.querySelector("#box").innerHTML = `
-	<div class="item"> ${no1}</div>
-	<div class="item"> ${symbol}</div>
-	<div class="item"> ${no2}</div>
-	<div class="item"> = </div>
-	<div class="item"> ${no3}</div>
-	`;
+          <div class="item"> ${no1}</div>
+          <div class="item"> ${symbol}</div>
+          <div class="item"> ${no2}</div>
+          <div class="item"> = </div>
+          <div class="item"> ${no3}</div>
+          `;
     });
 }
 
@@ -21,7 +21,6 @@ let questionNumber = 0;
 
 //countdown
 let i = 0;
-let shuodUpdate = false;
 function countdown() {
   let timeleft = 5;
   var downloadTimer = setInterval(function () {
@@ -30,6 +29,7 @@ function countdown() {
       i = 0;
       questionNumber++;
       update(questionNumber);
+      console.log(questionNumber);
     } else {
       i++;
     }
