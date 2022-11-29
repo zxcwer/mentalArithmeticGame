@@ -8,25 +8,33 @@
 }
 body {
   position: absolute;
+  display: inline-block;
   background-color: rgba(255, 255, 0, 0.3);
-  height: 100vh;
+  height: 80vh;
   width: 100%;
 }
 .title {
-  position: absolute;
+  position: relative;
   display: flex;
   z-index: 10;
+  font-size: 3em;
 }
 
 #clock {
-  position: absolute;
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-p {
+.score {
   position: relative;
-  font-size: 100px;
+  display: flex;
+  justify-content: flex-end;
+}
+p {
+  margin: 0;
+  position: relative;
+  font-size: 80px;
 }
 span {
   position: relative;
@@ -35,8 +43,8 @@ span {
   margin-left: 20px;
 }
 .all-box {
-  position: absolute;
-  height: 100%;
+  position: relative;
+  height: 90%;
   width: 100%;
 }
 #box {
@@ -44,7 +52,7 @@ span {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height: 50%;
 }
 
 .item {
@@ -54,15 +62,15 @@ span {
   font-size: 50px;
   text-shadow: 1px 1px 0px #7cacde;
   box-shadow: 1px 1px 1px #bee2f9;
-  padding: 90px;
+  padding: 80px;
   border-radius: 10px;
   border: 2px solid #3866a3;
   background: #63b8ee;
   background: linear-gradient(to top, #63b8ee, #468ccf);
 }
 .btn-box {
-  top: 70%;
-  position: absolute;
+  top: 50%;
+  position: relative;
   display: flex;
   z-index: 10;
 }
@@ -71,7 +79,7 @@ span {
   margin-left: 20px;
   text-decoration: none;
   color: #14396a !important;
-  font-size: 50px;
+  font-size: 40px;
   text-shadow: 1px 1px 0px #7cacde;
   box-shadow: 1px 1px 1px #bee2f9;
   padding: 50px 255px;
@@ -79,6 +87,7 @@ span {
   border: 2px solid #3866a3;
   background: #63b8ee;
   background: linear-gradient(to top, #63b8ee, #468ccf);
+  cursor: pointer;
 }
 h1 {
   font-size: 5em;
@@ -103,7 +112,7 @@ h1 {
   font-size: 50px;
   text-shadow: 1px 1px 0px #7cacde;
   box-shadow: 1px 1px 1px #bee2f9;
-  padding: 50px 170px;
+  padding: 50px 90px;
   border-radius: 10px;
   border: 2px solid #3866a3;
   background: #63b8ee;

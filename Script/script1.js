@@ -4,10 +4,11 @@ let no = document.getElementById("no"); //"誤"のボタン情報取得
 let correcting = "F";
 let right = 0;
 let wrong = 0;
-
+let i = 0;
+// let acc = right / 20;
 //data
 function update(i) {
-  fetch("./Question/data2.json")
+  fetch("./Question/level1.json")
     .then((response) => response.json())
     .then((data) => {
       let no1 = data[i].text[0];
@@ -23,17 +24,17 @@ function update(i) {
           <div class="item"> ${no3}</div>
           `;
     });
-  console.log(correcting);
+  // console.log(correcting);
 }
 
 //countdown
-let i = 0;
 function countdown() {
   let timeleft = 5;
   var downloadTimer = setInterval(function () {
     document.getElementById("seconds").textContent = timeleft - i;
     if (timeleft - i <= 0) {
       i = 0;
+      exit();
       questionNumber++;
       update(questionNumber);
     } else {
@@ -44,19 +45,25 @@ function countdown() {
 
 function button(checkId) {
   i = 0;
+  exit();
   questionNumber++;
   update(questionNumber);
-  console.log(checkId);
+  // console.log(checkId);
 
   if (checkId == correcting) {
     right++;
     document.getElementById("right").textContent = right;
-    console.log(right);
+    // console.log(right);
   } else if (checkId != correcting) {
     wrong++;
     document.getElementById("wrong").textContent = wrong;
   }
 }
+function exit() {
+  if (questionNumber == 20) {
+    alert(`正：${right} 誤：${wrong} 正解率：${(right * 100) / 20}%`);
+  }
+}
+exit();
 
-function checkAnswer() {}
 countdown();

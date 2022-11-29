@@ -7,7 +7,7 @@ let wrong = 0;
 
 //data
 function update(i) {
-  fetch("./Question/data2.json")
+  fetch("./Question/level5.json")
     .then((response) => response.json())
     .then((data) => {
       let no1 = data[i].text[0];
@@ -23,7 +23,6 @@ function update(i) {
           <div class="item"> ${no3}</div>
           `;
     });
-  console.log(correcting);
 }
 
 //countdown
@@ -34,6 +33,7 @@ function countdown() {
     document.getElementById("seconds").textContent = timeleft - i;
     if (timeleft - i <= 0) {
       i = 0;
+      exit();
       questionNumber++;
       update(questionNumber);
     } else {
@@ -45,18 +45,21 @@ function countdown() {
 function button(checkId) {
   i = 0;
   questionNumber++;
+  exit();
   update(questionNumber);
-  console.log(checkId);
 
   if (checkId == correcting) {
     right++;
     document.getElementById("right").textContent = right;
-    console.log(right);
   } else if (checkId != correcting) {
     wrong++;
     document.getElementById("wrong").textContent = wrong;
   }
 }
 
-function checkAnswer() {}
+function exit() {
+  if (questionNumber == 21) {
+    alert(`正：${right} 誤：${wrong} 正解率：${(right * 100) / 20}%`);
+  }
+}
 countdown();
