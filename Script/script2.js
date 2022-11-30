@@ -4,6 +4,7 @@ let no = document.getElementById("no"); //"誤"のボタン情報取得
 let correcting = "F";
 let right = 0;
 let wrong = 0;
+let answerNumber = 0;
 
 //data
 function update(i) {
@@ -59,8 +60,9 @@ function button(checkId) {
 }
 
 function exit() {
-  if (questionNumber == 20) {
-    alert(`正：${right} 誤：${wrong} 正解率：${(right * 100) / 20}%`);
+  answerNumber = right + wrong;
+  if (answerNumber == 20) {
+    alert(`正：${right} 誤：${wrong} 正解率：${(right * 100) / answerNumber}%`);
   }
 }
 countdown();
