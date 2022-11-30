@@ -6,10 +6,10 @@
 
 <div style="text-align:center">
 <img src="./asset/readmePic/home.png" style="width:50%"/>
-<p> ホーム画面
+  <p> ホーム画面</p>
 
 <img src="./asset/readmePic/level1.png" style="width:50%"/>
-<p> Level 1
+  <p> Level 1</p>
 </div>
 
 ## 仕様技術
