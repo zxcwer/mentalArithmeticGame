@@ -62,7 +62,7 @@ function button(checkId) {
 }
 function exit() {
   answerNumber = right + wrong;
-  if (answerNumber == 170) {
+  if (answerNumber == 180) {
     alert(`正：${right} 誤：${wrong} 正解率：${(right * 100) / answerNumber}%`);
   }
 }
